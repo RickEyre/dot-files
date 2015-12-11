@@ -1,0 +1,7 @@
+[user]
+	name = Rick Eyre
+	email = rick.eyre@outlook.com
+[push]
+	default = current
+[credential]
+	helper = osxkeychain
