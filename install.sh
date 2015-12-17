@@ -31,3 +31,5 @@ brew cask install iterm2
 brew cask install gitup
 brew cask install atom
 brew cask install google-chrome
+brew cask install alfred
+brew cask install dash
