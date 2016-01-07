@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+
+var request = require('superagent');
+var proxyRequest = require('superagent-proxy')
+
+proxyRequest(request);
+
+request
+  .get('http://search.maven.org/solrsearch/select')
+  .query({q: process.argv[2], rows: 20, wt: 'json'})
+  .proxy(process.env.http_proxy)
+  .end((err, res) => {
+    res.body.response.docs.forEach(doc => {
+      console.log(doc.id + ' ' + doc.latestVersion + ' ' + doc.repositoryId);
+    })
+  });

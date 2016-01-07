@@ -12,6 +12,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew install nvm
 brew install cask
 brew install autoenv
+brew install maven
 
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -25,6 +26,7 @@ nvm install stable
 nvm alias default stable
 
 # Install tools
+cd $DOT_FILES_PATH && npm install
 npm install -g little-helper
 
 brew cask install iterm2
