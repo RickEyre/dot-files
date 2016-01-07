@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 var request = require('superagent');
-var proxyRequest = require('superagent-proxy')
+var proxyRequest = require('superagent-proxy');
 
 proxyRequest(request);
 
@@ -12,5 +12,5 @@ request
   .end((err, res) => {
     res.body.response.docs.forEach(doc => {
       console.log(`${doc.id}@${doc.latestVersion} -- ${doc.repositoryId}`);
-    })
+    });
   });
