@@ -11,6 +11,6 @@ request
   .proxy(process.env.http_proxy)
   .end((err, res) => {
     res.body.response.docs.forEach(doc => {
-      console.log(doc.id + ' ' + doc.latestVersion + ' ' + doc.repositoryId);
+      console.log(`${doc.id}@${doc.latestVersion} -- ${doc.repositoryId}`);
     })
   });
